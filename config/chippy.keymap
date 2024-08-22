@@ -39,42 +39,51 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        caps_word {
+            bindings = <&caps_word>;
+            key-positions = <19 16>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-&kp TAB    &kp Q                &kp W            &kp F                &kp P              &kp B      &kp J    &kp L              &kp U                &kp Y            &kp SEMICOLON        &kp BSPC
-&kp LSHFT  &hml LEFT_CONTROL A  &hml LEFT_ALT R  &hml LEFT_COMMAND S  &hml LEFT_SHIFT T  &kp G      &kp M    &hmr LEFT_SHIFT N  &hmr LEFT_COMMAND E  &hmr LEFT_ALT I  &hmr LEFT_CONTROL O  &kp SQT
-&kp LCTRL  &kp Z                &mt LALT X       &kp C                &kp D              &kp V      &kp K    &kp H              &kp COMMA            &mt RALT DOT     &kp FSLH             &kp ESC
-                                                 &kp ESCAPE           &kp SPACE          &lt 1 TAB  &kp RET  &kp BACKSPACE      &kp RGUI
+&kp TAB     &kp Q                &kp W            &kp F                &kp P              &kp B      &kp J        &kp L              &kp U                &kp Y             &mt COLON SEMICOLON  &kp BSPC
+&kp ESCAPE  &hml LEFT_CONTROL A  &hml LEFT_ALT R  &hml LEFT_COMMAND S  &hml LEFT_SHIFT T  &kp G      &kp M        &hmr LEFT_SHIFT N  &hmr LEFT_COMMAND E  &hmr LEFT_ALT I   &hmr LEFT_CONTROL O  &kp SQT
+&mo 3       &kp Z                &mt LALT X       &kp C                &kp D              &kp V      &kp K        &kp H              &kp COMMA            &mt QUESTION DOT  &kp FSLH             &mo 3
+                                                  &lt 1 DELETE         &kp SPACE          &lt 2 TAB  &lt 2 ENTER  &kp BACKSPACE      &mo 1
             >;
         };
 
-        lower_layer {
+        nav {
             bindings = <
-&kp TAB     &kp F1        &kp F2        &kp F3        &kp F4        &kp F5        &kp F6    &kp F7    &kp F8    &kp F9     &kp F10    &kp BSPC
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &kp F11    &kp F12
-&kp LCTRL   &kp LSHFT     &kp LALT      &trans        &trans        &trans        &trans    &trans    &trans    &kp RALT   &kp RSHFT  &kp RCTRL
-                                        &kp LGUI      &trans        &kp SPACE     &kp RET   &trans    &kp RGUI
+&trans  &trans     &trans        &trans        &trans          &trans     &kp H     &kp J          &kp K      &kp L      &trans  &trans
+&trans  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_GUI  &kp LEFT_SHIFT  &trans     &kp LEFT  &kp DOWN       &kp UP     &kp RIGHT  &trans  &trans
+&trans  &trans     &trans        &trans        &trans          &trans     &kp HOME  &kp PAGE_DOWN  &kp PG_UP  &kp END    &trans  &trans
+                                 &bt BT_CLR    &trans          &kp SPACE  &kp RET   &trans         &kp RGUI
             >;
         };
 
-        raise_layer {
+        num_symbol {
             bindings = <
-&kp TAB    &kp N1  &kp N2    &kp N3    &kp N4  &kp N5     &kp N6     &kp N7     &kp N8    &kp N9         &kp N0    &kp BSPC
-&kp LSHFT  &trans  &trans    &trans    &trans  &tog 3     &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT       &kp BSLH  &kp GRAVE
-&kp LCTRL  &trans  &kp LALT  &trans    &trans  &tog 4     &kp UNDER  &kp PLUS   &kp LBRC  &mt RALT RBRC  &kp PIPE  &kp TILDE
-                             &kp LGUI  &trans  &kp SPACE  &kp RET    &trans     &kp RGUI
+&kp TAB    &kp EXCLAMATION             &kp AT_SIGN                      &kp HASH                           &kp DOLLAR                      &kp PERCENT  &kp PLUS   &kp N7               &kp N8        &kp N9              &kp ASTERISK        &kp BSPC
+&kp LSHFT  &hml LCTRL CARET            &hml LEFT_ALT TILDE              &mt LGUI GRAVE                     &mt LEFT_SHIFT SQT              &kp SQT      &kp EQUAL  &hmr LSHFT NUMBER_4  &hmr LGUI N5  &hmr LALT NUMBER_6  &hmr LCTRL PERCENT  &kp GRAVE
+&kp LCTRL  &mt LESS_THAN LEFT_BRACKET  &mt LEFT_BRACE LEFT_PARENTHESIS  &mt RIGHT_BRACE RIGHT_PARENTHESIS  &mt GREATER_THAN RIGHT_BRACKET  &kp CARET    &kp MINUS  &kp NUMBER_1         &kp NUMBER_2  &kp NUMBER_3        &kp SLASH           &kp TILDE
+                                                                        &kp LGUI                           &kp UNDER                       &kp SPACE    &kp RET    &trans               &kp N0
             >;
         };
 
-        gamelol_layer {
+        media {
             bindings = <
-&kp TAB    &kp N1  &kp N2  &kp N3    &kp N4  &kp N5     &kp Y    &trans  &trans    &trans  &trans  &kp ESC
-&kp LSHFT  &kp Q   &kp W   &kp E     &kp R   &kp T      &trans   &trans  &trans    &trans  &trans  &trans
-&kp LCTRL  &kp A   &kp S   &kp D     &kp F   &kp G      &kp P    &trans  &trans    &trans  &trans  &tog 3
-                           &kp LALT  &kp B   &kp SPACE  &kp RET  &trans  &kp RGUI
+&bootloader  &trans        &trans        &trans        &trans        &trans        &trans            &trans        &trans        &trans      &trans  &trans
+&trans       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &kp C_PREV        &kp C_VOL_DN  &kp C_VOL_UP  &kp C_NEXT  &trans  &trans
+&trans       &trans        &trans        &trans        &trans        &trans        &trans            &trans        &trans        &trans      &trans  &trans
+                                         &bt BT_CLR    &to 0         &trans        &kp C_PLAY_PAUSE  &trans        &trans
             >;
         };
 
