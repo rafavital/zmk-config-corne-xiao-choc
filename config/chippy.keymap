@@ -46,6 +46,26 @@
             bindings = <&caps_word>;
             key-positions = <19 16>;
         };
+
+        undo {
+            bindings = <&kp LG(Z)>;
+            key-positions = <25 26>;
+        };
+
+        cut {
+            bindings = <&kp LG(X)>;
+            key-positions = <26 27>;
+        };
+
+        copy {
+            bindings = <&kp C>;
+            key-positions = <27 28>;
+        };
+
+        paste {
+            bindings = <&kp LG(V)>;
+            key-positions = <29 28>;
+        };
     };
 
     keymap {
@@ -55,7 +75,7 @@
             bindings = <
 &kp TAB     &kp Q                &kp W            &kp F                &kp P              &kp B      &kp J        &kp L              &kp U                &kp Y             &mt COLON SEMICOLON  &kp BSPC
 &kp ESCAPE  &hml LEFT_CONTROL A  &hml LEFT_ALT R  &hml LEFT_COMMAND S  &hml LEFT_SHIFT T  &kp G      &kp M        &hmr LEFT_SHIFT N  &hmr LEFT_COMMAND E  &hmr LEFT_ALT I   &hmr LEFT_CONTROL O  &kp SQT
-&mo 3       &kp Z                &kp X            &kp C                &kp D              &kp V      &kp K        &kp H              &kp COMMA            &mt QUESTION DOT  &kp FSLH             &mo 3
+&mo 3       &kp Z                &kp X            &kp C                &kp D              &kp V      &kp K        &kp H              &kp COMMA            &mt QUESTION DOT  &mt PIPE SLASH       &mo 3
                                                   &lt 1 SPACE          &kp SPACE          &lt 2 TAB  &lt 2 ENTER  &kp BACKSPACE      &mo 1
             >;
         };
