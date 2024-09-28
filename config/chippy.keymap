@@ -50,21 +50,41 @@
         undo {
             bindings = <&kp LG(Z)>;
             key-positions = <25 26>;
+            require-prior-idle-ms = <150>;
         };
 
         cut {
             bindings = <&kp LG(X)>;
             key-positions = <26 27>;
+            require-prior-idle-ms = <150>;
         };
 
         copy {
-            bindings = <&kp C>;
+            bindings = <&kp LG(C)>;
             key-positions = <27 28>;
+            require-prior-idle-ms = <150>;
         };
 
         paste {
             bindings = <&kp LG(V)>;
             key-positions = <29 28>;
+            require-prior-idle-ms = <150>;
+        };
+
+        qw_esc {
+            bindings = <&kp ESCAPE>;
+            key-positions = <1 2>;
+        };
+
+        bckspc {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <6 7>;
+        };
+
+        delete {
+            bindings = <&kp DELETE>;
+            key-positions = <9 10>;
+            require-prior-idle-ms = <150>;
         };
     };
 
