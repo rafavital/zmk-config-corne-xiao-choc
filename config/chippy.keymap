@@ -7,6 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 
 / {
     behaviors {
@@ -99,19 +100,19 @@
 
         default_layer {
             bindings = <
-&kp TAB     &kp Q                &kp W            &kp F                &kp P                        &kp B                    &kp J                    &kp L                            &kp U                &kp Y             &mt COLON SEMICOLON  &kp BSPC
-&kp ESCAPE  &hml LEFT_CONTROL A  &hml LEFT_ALT R  &hml LEFT_COMMAND S  &hml LEFT_SHIFT T            &hml LA(LC(LEFT_GUI)) G  &hmr LA(LC(LEFT_GUI)) M  &hmr LEFT_SHIFT N                &hmr LEFT_COMMAND E  &hmr LEFT_ALT I   &hmr LEFT_CONTROL O  &kp SQT
-&mo 3       &kp Z                &kp X            &kp C                &kp D                        &kp V                    &kp K                    &kp H                            &kp COMMA            &mt QUESTION DOT  &mt PIPE SLASH       &mo 3
-                                                  &lt 1 SPACE          &hml LA(LC(LEFT_GUI)) SPACE  &lt 2 TAB                &lt 2 LEFT_SHIFT         &hmr LC(LA(LEFT_GUI)) BACKSPACE  &mo 1
+&kp TAB     &kp Q                &kp W            &kp F                &kp P              &kp B                    &kp J                    &kp L              &kp U                &kp Y             &mt COLON SEMICOLON  &kp BSPC
+&kp ESCAPE  &hml LEFT_CONTROL A  &hml LEFT_ALT R  &hml LEFT_COMMAND S  &hml LEFT_SHIFT T  &hml LA(LC(LEFT_GUI)) G  &hmr LA(LC(LEFT_GUI)) M  &hmr LEFT_SHIFT N  &hmr LEFT_COMMAND E  &hmr LEFT_ALT I   &hmr LEFT_CONTROL O  &kp SQT
+&mo 3       &kp Z                &kp X            &kp C                &kp D              &kp V                    &kp K                    &kp H              &kp COMMA            &mt QUESTION DOT  &mt PIPE SLASH       &mo 3
+                                                  &lt 1 ESCAPE         &lt 2 SPACE        &mt LEFT_SHIFT TAB       &mt LEFT_SHIFT ENTER     &lt 2 BACKSPACE    &lt 1 DELETE
             >;
         };
 
         nav {
             bindings = <
-&trans  &trans     &trans        &trans        &trans          &trans     &kp H     &kp J          &kp K      &kp L      &trans  &trans
-&trans  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_GUI  &kp LEFT_SHIFT  &trans     &kp LEFT  &kp DOWN       &kp UP     &kp RIGHT  &trans  &trans
-&trans  &trans     &trans        &trans        &trans          &trans     &kp HOME  &kp PAGE_DOWN  &kp PG_UP  &kp END    &trans  &trans
-                                 &bt BT_CLR    &trans          &kp SPACE  &kp RET   &trans         &kp RGUI
+&trans  &trans     &trans        &trans        &trans          &trans     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans  &trans
+&trans  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_GUI  &kp LEFT_SHIFT  &trans     &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT        &trans  &trans
+&trans  &trans     &trans        &trans        &trans          &trans     &kp H           &kp J           &kp K         &kp L            &trans  &trans
+                                 &bt BT_CLR    &trans          &kp SPACE  &kp RET         &trans          &kp RGUI
             >;
         };
 
