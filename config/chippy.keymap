@@ -92,6 +92,16 @@
             bindings = <&kp CAPSLOCK>;
             key-positions = <15 16 19 20>;
         };
+
+        rst_r {
+            bindings = <&sys_reset>;
+            key-positions = <11 23>;
+        };
+
+        rst_l {
+            bindings = <&sys_reset>;
+            key-positions = <0 12>;
+        };
     };
 
     keymap {
